@@ -82,16 +82,16 @@ Once you're at the home page of your GitHub repository, the key difference to ta
 
 Open the script.md file. Before we making any changes, take note of the URL at the top of your browser. 
 
-The URL path should be similar to the following: https://github.com/<your-username>/git-workshop/blob/<your-new-branch-name>/script.md.
+The URL path should be similar to the following: https://github.com/USERNAME/git-workshop/blob/BRANCH/script.md.
 
-Notice how <your-new-branch-name is prepended before script.md. This indicates you're viewing the the version of script.md stored on <your-new-branch-name>.
+Notice how BRANCH is prepended before script.md. This indicates you're viewing the the version of script.md stored on BRANCH.
 
-Try changing <your-new-branch-name> to main and notice how the branch you're on changes. Open a new tab and set the URL in your browser to the following (be sure to change <your-username> to your GitHub username):
-https://github.com/<your-username>/git-workshop/blob/main/script.md
+Try changing BRANCH to main and notice how the branch you're on changes. Open a new tab and set the URL in your browser to the following (be sure to change USERNAME to your GitHub username):
+https://github.com/USERNAME/git-workshop/blob/main/script.md
 
 ### Update script.md
 Before we continue, check that you're working in the branch we created in the previous exercise. The URL at the top of your browser should say:
-https://github.com/<your-username>/git-workshop/tree/<your-branch-name>
+https://github.com/USERNAME/git-workshop/tree/BRANCH
 
 Open the script.md file. Like we did in a previous file, click the pencil icon at the top right of the page to edit the file. 
 
@@ -107,3 +107,39 @@ Now, let's take what we practiced before in the previous exercises. After you've
 Add a short but descriptive commit message in the modal that pops up, then ensure `Commit directly to the <your-branch-name> branch` is selected. Then click "Commit changes".
 
 ## 4. Create a pull request from your change branch to main
+
+After completing the previous exercise, we now have a new commit on a branch that is not on the main branch. If you switch back over to the main branch, you will notice that your change is not reflected. Generally, when a developer has completed work on a feature they were developing in a branch they will merge that branch back to main so the feature or content is part of the front-facing repository. The goal with this exercise is to merge the branch from the previous exercise back onto main. We'll do this by creating a pull request.
+
+### Create a pull request
+
+Click on the "Pull Request" tab on the repository's ribbon menu. 
+![Screenshot (272)](https://github.com/user-attachments/assets/8fb31452-6e19-4f09-a778-19f2148835d6)
+
+Select "New pull request"
+![Screenshot (273)](https://github.com/user-attachments/assets/1c237c71-aab7-4cd7-9e9e-9722eca3d005)
+
+Ensure that the `base` branch is your main branch and the `compare branch is your BRANCH from the previous exercise. Once you do so, the list of changes on the branch should show up on the page. 
+![Screenshot (274)](https://github.com/user-attachments/assets/e2df614d-84e9-44b3-8796-e68dcfcc1cb6)
+
+![Screenshot (275)](https://github.com/user-attachments/assets/a59b6fd5-2959-41bd-b71e-8f23102bf986)
+
+Click on "Create pull request" and provide a descriptive title and description for the request. After doing so, click on "Create pull request".
+
+![Screenshot (276)](https://github.com/user-attachments/assets/c57230a0-247f-4bd9-8f3a-b52c426401db)
+
+### Merge the pull request
+GitHub will process the pull request to identify any conflicts with the main branch. Assuming you didn't make any drastic changes, it should give you the option to merge the pull request. Click on "Merge pull request" and then "Confirm merge". 
+
+![Screenshot (277)](https://github.com/user-attachments/assets/66297f37-90e9-49df-b659-fb07c0b8d367)
+
+![Screenshot (278)](https://github.com/user-attachments/assets/43b95642-3841-4283-9531-746bea7e22db)
+
+Your branch has been successfully merged onto the main branch. You can delete the branch to clean up the repository before going back to confirm your change was successfully merged with the pull request.
+
+![Screenshot (279)](https://github.com/user-attachments/assets/19ad6742-083b-433e-9712-4dbdcddc25ad)
+
+### Confirm that the merge occured
+
+On the main branch, open up the changed file and check to make sure the file was altered. You should see your change on the main branch. 
+
+![Screenshot (280)](https://github.com/user-attachments/assets/52cb5f41-d6ff-4744-81d0-8a632f51a7d5)
